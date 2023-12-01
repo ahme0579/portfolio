@@ -1,0 +1,301 @@
+/* font-family: 'Orbitron', sans-serif;
+font-family: 'VT323', monospace; */
+/* font-family: 'Syne', sans-serif; */
+*:focus {
+    box-shadow: none !important;
+    border: none;
+}
+
+:root {
+    --color-main-black: #242422;
+    --color-text: #CDC7C2;
+    --block-color: #948477;
+    --block-color-light: #E1D6C4;
+}
+
+body {
+    background-color: var(--color-main-black);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+}
+
+.logo:nth-child(2) {
+    font-family: 'Orbitron', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-text);
+}
+
+.intro {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-main-black);
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-text);
+}
+
+.logo {
+    position: relative;
+    display: inline;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.marquee__content li {
+    list-style: none;
+    font-size: 5rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    color: transparent;
+    margin-top: -30px;
+    text-transform: uppercase;
+    padding: 0 0.5rem;
+    -webkit-text-stroke: 2px var(--color-text);
+}
+
+
+.marquee {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    padding-top: 1rem;
+    height: 50%;
+}
+
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    margin: 0;
+    animation: scroll 18s linear infinite;
+}
+
+
+
+.marquee2 {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    height: 50%;
+    border-top: 1px solid var(--color-text);
+    border-bottom: 1px solid var(--color-text);
+}
+
+
+
+.marquee__content2 {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+
+    gap: var(--gap);
+    margin: 0;
+    animation: scroll 18s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+.navbar {
+    background-color: var(--color-main-black);
+    border: 2px solid var(--color-text);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.nav-item a {
+    color: var(--color-text);
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.nav-item a:hover {
+    color: var(--block-color);
+    transition: ease-in-out 0.3s;
+}
+
+.navbar-toggler[aria-expanded=false] span::after {
+    content: "menu";
+    font-family: "Material Icons";
+    color: var(--color-text);
+    border: none;
+}
+
+button span::after {
+    content: "close";
+    font-family: "Material Icons";
+    color: var(--color-text);
+    border: none;
+}
+
+.menu-logo {
+    max-width: 40%;
+}
+
+.menu-logo:hover {
+    filter: brightness(80%);
+    transition: ease-in-out 0.3s;
+}
+
+.carousel {
+    max-width: 100%;
+    padding: 1rem 0;
+}
+
+.carousel-item img {
+    filter: sepia(30%);
+    filter: brightness(60%)
+}
+
+.line {
+    border-bottom: 2px solid var(--color-text);
+}
+
+main .container-fluid {
+    background-color: var(--block-color);
+}
+
+main .container-fluid img {
+    padding: 1.5rem;
+}
+
+main .container-fluid p {
+    font-family: 'VT323', monospace;
+    font-size: 1.4rem;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+main .container-fluid h2 {
+    padding: 1rem 1rem 0 1rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bolder;
+    font-size: 3rem;
+    color: var(--color-main-black);
+    text-transform: uppercase;
+}
+
+.project-container {
+    padding: 1rem;
+}
+
+.col-md-6 {
+    padding: 0;
+}
+
+.project-container h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bolder;
+    font-size: 5rem;
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee__content {
+        animation-play-state: paused !important;
+
+    }
+
+    .marquee__content2 {
+        animation-play-state: paused !important;
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .marquee__content li {
+        list-style: none;
+        font-size: 3rem;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: bold;
+        color: transparent;
+        margin-top: -30px;
+        text-transform: uppercase;
+        padding: 0 0.5rem;
+        -webkit-text-stroke: 2px var(--color-text);
+    }
+
+    main .container-fluid img {
+        padding: 1rem 0 0 0;
+    }
+
+    main .container-fluid h2 {
+        font-size: 1.5rem;
+    }
+
+    main .container-fluid {
+        text-align: center;
+    }
+
+    .menu-logo {
+        max-width: 30%;
+        margin-left: 0.5rem;
+    }
+
+    main .container-fluid img {
+        padding: 0.5rem;
+    }
+
+    .logo {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .logo-header {
+
+        top: 40%;
+
+    }
+
+    .marquee2 img {
+        width: 20%;
+    }
+
+    .project-container h1 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}
