@@ -1,0 +1,88 @@
+:root {
+    --color-main-black: #242422;
+    --color-text: #CDC7C2;
+    --block-color: #948477;
+    --block-color-light: #E1D6C4;
+}
+
+
+
+.row {
+    font-family: 'VT323', monospace;
+    font-size: 4rem;
+    color: var(--color-main-black);
+}
+
+p {
+    font-size: 2rem;
+    color: var(--color-main-black);
+}
+
+.contact-main .form {
+    background-color: var(--block-color);
+    padding: 2rem;
+}
+
+.form input {
+    background-color: var(--block-color-light);
+    border-radius: 0;
+}
+
+.form label {
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    color: var(--color-main-black);
+}
+
+input[type=text]:focus {
+    background-color: var(--block-color-light);
+}
+
+textarea {
+    background-color: var(--block-color-light) !important;
+    border-radius: 0 !important;
+    resize: none;
+}
+
+.btn {
+    background-color: var(--block-color-light);
+    border-radius: unset;
+    margin-right: 0 !important;
+    color: var(--color-main-black);
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    padding: 0 2rem;
+}
+
+.btn:hover {
+    background-color: var(--color-main-black);
+    color: var(--block-color-light);
+}
+
+.contact-container .svg-contact {
+    width: 100%;
+    margin-top: -70px;
+}
+
+.character {
+    position: absolute;
+    left: 0;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .row {
+        font-size: 2rem;
+
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .contact-main .form {
+        padding: 1rem;
+    }
+
+
+}

@@ -1,9 +1,46 @@
 /* font-family: 'Orbitron', sans-serif;
 font-family: 'VT323', monospace; */
 /* font-family: 'Syne', sans-serif; */
+
+
+@import 'contact.css';
+
 *:focus {
     box-shadow: none !important;
     border: none;
+}
+
+.noise::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    opacity: .04;
+    z-index: 1000;
+    pointer-events: none;
+    background: url(../images/noise.gif);
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 2rem;
+    border: 2px solid var(--block-color-light);
+    outline: none;
+    background-color: transparent;
+    color: var(--block-color-light);
+    cursor: pointer;
+    padding: 0 1rem;
+    font-family: 'VT323', monospace;
+}
+
+#myBtn:hover {
+    background-color: #555;
 }
 
 :root {
@@ -81,7 +118,6 @@ body {
 
 .marquee {
     --gap: 1rem;
-    display: flex;
     overflow: hidden;
     user-select: none;
     gap: var(--gap);
@@ -91,8 +127,6 @@ body {
 
 .marquee__content {
     flex-shrink: 0;
-    display: flex;
-    justify-content: space-around;
     min-width: 100%;
     gap: var(--gap);
     margin: 0;
@@ -103,7 +137,6 @@ body {
 
 .marquee2 {
     --gap: 1rem;
-    display: flex;
     overflow: hidden;
     user-select: none;
     gap: var(--gap);
@@ -116,9 +149,6 @@ body {
 
 .marquee__content2 {
     flex-shrink: 0;
-    display: flex;
-    justify-content: space-around;
-
     gap: var(--gap);
     margin: 0;
     animation: scroll 18s linear infinite;
@@ -183,28 +213,27 @@ button span::after {
     padding: 1rem 0;
 }
 
-.carousel-item img {}
 
 .line {
     border-bottom: 2px solid var(--color-text);
 }
 
-main .container-fluid {
+.home-main .container-fluid {
     background-color: var(--block-color);
     margin-top: 0 !important;
 }
 
-main .container-fluid img {
+.home-main .container-fluid img {
     padding: 1.5rem;
 }
 
-main .container-fluid p {
+.home-main .container-fluid p {
     font-family: 'VT323', monospace;
     font-size: 1.4rem;
     padding: 0rem 1rem 0rem 1rem;
 }
 
-main .container-fluid h2 {
+.home-main .container-fluid h2 {
     padding: 1rem 1rem 0 1rem;
     font-family: 'Orbitron', sans-serif;
     font-weight: bolder;
@@ -242,9 +271,42 @@ main .container-fluid h2 {
 .rectangle img {
     margin-bottom: 1rem;
     background-color: #7c7875;
-
 }
 
+
+.footermenu {
+    color: #fff;
+    padding: 15px;
+}
+
+.column-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.column-menu li {
+    margin-bottom: 10px;
+}
+
+.column-menu a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+}
+
+i {
+    font-size: 1.3rem;
+    padding-right: 1rem;
+    color: var(--color-text);
+}
+
+.column-menu a:hover {
+    color: var(--block-color);
+    transition: ease-in-out 0.5s;
+
+}
 
 @media (prefers-reduced-motion: reduce) {
     .marquee__content {
@@ -272,15 +334,15 @@ main .container-fluid h2 {
         -webkit-text-stroke: 2px var(--color-text);
     }
 
-    main .container-fluid img {
+    .home-main .container-fluid img {
         padding: 1rem 0 0 0;
     }
 
-    main .container-fluid h2 {
+    .home-main .container-fluid h2 {
         font-size: 1.5rem;
     }
 
-    main .container-fluid {
+    .home-main .container-fluid {
         text-align: center;
     }
 
@@ -289,7 +351,7 @@ main .container-fluid h2 {
         margin-left: 0.5rem;
     }
 
-    main .container-fluid img {
+    .home-main .container-fluid img {
         padding: 0.5rem;
     }
 
@@ -311,5 +373,15 @@ main .container-fluid h2 {
     .project-container h1 {
         text-align: center;
         font-size: 2.5rem;
+    }
+
+    .column-menu a {
+        font-size: 1rem;
+    }
+
+    i {
+        font-size: 1rem;
+        padding-right: 0.5rem;
+        color: var(--color-text);
     }
 }
