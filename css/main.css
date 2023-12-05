@@ -4,6 +4,7 @@ font-family: 'VT323', monospace; */
 
 
 @import 'contact.css';
+@import 'about.css';
 
 *:focus {
     box-shadow: none !important;
@@ -306,6 +307,11 @@ i {
     color: var(--block-color);
     transition: ease-in-out 0.5s;
 
+}
+
+.project:hover {
+    filter: drop-shadow(0 0 0.75rem var(--color-main-black));
+    transition: all 0.5s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {

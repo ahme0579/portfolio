@@ -1,0 +1,43 @@
+:root {
+    --color-main-black: #242422;
+    --color-text: #CDC7C2;
+    --block-color: #948477;
+    --block-color-light: #E1D6C4;
+}
+
+/* .about-main h2 {
+    font-family: 'Syne', sans-serif;
+    color: var(--color-text);
+    font-weight: 800;
+    font-size: 3.2rem;
+}
+
+.about-main p {
+    color: var(--color-text);
+    font-size: 2rem;
+} */
+
+.vision {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../images/vision-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    padding: 3rem 0;
+    margin: 3rem 0;
+}
+
+.vision h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-text);
+    font-size: 4rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+
+.vision p {
+    color: var(--color-text);
+}
