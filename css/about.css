@@ -5,7 +5,7 @@
     --block-color-light: #E1D6C4;
 }
 
-/* .about-main h2 {
+.about-main h2 {
     font-family: 'Syne', sans-serif;
     color: var(--color-text);
     font-weight: 800;
@@ -14,8 +14,8 @@
 
 .about-main p {
     color: var(--color-text);
-    font-size: 2rem;
-} */
+    font-size: 1.5rem;
+}
 
 .vision {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../images/vision-image.jpg);
@@ -25,7 +25,7 @@
     position: relative;
     background-attachment: fixed;
     padding: 3rem 0;
-    margin: 3rem 0;
+    margin: 0 0 3rem 0;
 }
 
 .vision h2 {
@@ -40,4 +40,32 @@
 
 .vision p {
     color: var(--color-text);
+    font-size: 1.3rem;
+}
+
+.aashif {
+    width: 100%;
+}
+
+.about-container {
+    padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .about-main p {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-main p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .about-main h2 {
+        text-align: center;
+        padding-top: 1rem;
+        font-size: 2.8rem;
+    }
 }

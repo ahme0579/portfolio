@@ -18,7 +18,7 @@ font-family: 'VT323', monospace; */
     width: 100vw;
     height: 100vh;
     content: "";
-    opacity: .04;
+    opacity: .05;
     z-index: 1000;
     pointer-events: none;
     background: url(../images/noise.gif);
@@ -49,11 +49,14 @@ font-family: 'VT323', monospace; */
     --color-text: #CDC7C2;
     --block-color: #948477;
     --block-color-light: #E1D6C4;
+
+    --bs-body-bg: #242422;
+    --bs-primary: #CDC7C2;
+    --bs-secondary: #242422;
+    --bs-tertiary-bg: #948477;
+    --bs-btn-primary: #E1D6C4;
 }
 
-body {
-    background-color: var(--color-main-black);
-}
 
 .logo {
     font-family: 'Orbitron', sans-serif;
