@@ -29,4 +29,4 @@ This is the repository for my Web Development II Portfolio Project. I began by u
 - [Icons(2)] (https://fontawesome.com)
 
 ## Logo
- [placeholder](images/raclogo-transp-278_x_185-139_x_92.jpg)
+ [placeholder](images/raclogo-transp-278_x_185-139_x_92.png)
