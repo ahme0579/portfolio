@@ -1,23 +1,19 @@
-:root {
-    --color-main-black: #242422;
-    --color-text: #CDC7C2;
-    --block-color: #948477;
-    --block-color-light: #E1D6C4;
-}
-
+/* styling for the h2 tag */
 .about-main h2 {
     font-family: 'Syne', sans-serif;
-    color: var(--color-text);
+    color: var(--bs-primary);
     font-weight: 800;
     font-size: 3.2rem;
 }
 
+/* styling for the paragraph */
 .about-main p {
-    color: var(--color-text);
+    color: var(--bs-primary);
     font-size: 1.5rem;
 }
 
-.vision {
+/* using background-image property for the vision section as per the hi fidelity design */
+#vision {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../images/vision-image.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -28,18 +24,17 @@
     margin: 0 0 3rem 0;
 }
 
-.vision h2 {
+#vision h2 {
     font-family: 'Orbitron', sans-serif;
     color: transparent;
-    -webkit-text-stroke: 1px var(--color-text);
+    -webkit-text-stroke: 1px var(--bs-primary);
     font-size: 4rem;
     font-weight: bolder;
     text-transform: uppercase;
 }
 
-
-.vision p {
-    color: var(--color-text);
+#vision p {
+    color: var(--bs-primary);
     font-size: 1.3rem;
 }
 
@@ -51,12 +46,14 @@
     padding-bottom: 2rem;
 }
 
+/* media query for font-size at tablet width of 1024px */
 @media only screen and (max-width: 1024px) {
     .about-main p {
         font-size: 1.5rem;
     }
 }
 
+/* media query for font-size at mobile width of 768px */
 @media only screen and (max-width: 768px) {
     .about-main p {
         font-size: 1.2rem;

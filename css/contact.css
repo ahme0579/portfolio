@@ -1,21 +1,25 @@
-.row {
+/* h2 styling for contact */
+.row h2 {
     font-family: 'VT323', monospace;
     font-size: 4rem;
-    color: var(--color-main-black);
+    color: var(--bs-body-bg);
 }
 
-p {
+/* paragraph styling for the form */
+.row p {
+    font-family: 'VT323', monospace;
     font-size: 2rem;
-    color: var(--color-main-black);
+    color: var(--bs-body-bg);
 }
 
+/* basic form colors using bootstrap colors as set in root */
 .contact-main .form {
-    background-color: var(--block-color);
+    background-color: var(--bs-tertiary-bg);
     padding: 2rem;
 }
 
 .form input {
-    background-color: var(--block-color-light);
+    background-color: var(--bs-btn-primary);
     border-radius: 0;
     font-family: 'VT323', monospace;
     font-size: 1.5rem;
@@ -24,15 +28,16 @@ p {
 .form label {
     font-family: 'VT323', monospace;
     font-size: 2rem;
-    color: var(--color-main-black);
+    color: var(--bs-body-bg);
 }
 
 input[type=text]:focus {
-    background-color: var(--block-color-light);
+    background-color: var(--bs-btn-primary);
 }
 
+/* use of multiple !important tags to overwrite default bootstrap styling */
 textarea {
-    background-color: var(--block-color-light) !important;
+    background-color: var(--bs-btn-primary) !important;
     border-radius: 0 !important;
     resize: none;
     font-family: 'VT323', monospace;
@@ -40,38 +45,34 @@ textarea {
 }
 
 .btn {
-    background-color: var(--block-color-light);
+    background-color: var(--bs-btn-primary);
     border-radius: unset;
     margin-right: 0 !important;
-    color: var(--color-main-black);
+    color: var(--bs-body-bg);
     font-family: 'VT323', monospace;
     font-size: 2rem;
     padding: 0 2rem;
 }
 
 .btn:hover {
-    background-color: var(--color-main-black);
-    color: var(--block-color-light);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-btn-primary);
 }
 
+/* contact svg with negative margin to create subtle overlay as per the hi fidelity design */
 .contact-container .svg-contact {
     width: 100%;
     margin-top: -70px;
 }
 
-.character {
-    position: absolute;
-    left: 0;
-    max-width: 100%;
-}
-
+/* media query for mobile basic font sizes and reduced padding for smaller sized devices */
 @media only screen and (max-width: 768px) {
-    .row {
+    .row h2 {
         font-size: 2rem;
 
     }
 
-    p {
+    .row p {
         font-size: 1.5rem;
     }
 

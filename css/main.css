@@ -1,16 +1,17 @@
-/* font-family: 'Orbitron', sans-serif;
-font-family: 'VT323', monospace; */
-/* font-family: 'Syne', sans-serif; */
-
-
+/* import other css files */
 @import 'contact.css';
 @import 'about.css';
 
-*:focus {
-    box-shadow: none !important;
-    border: none;
+/* root set for bootstrap colors using my values */
+:root {
+    --bs-body-bg: #242422;
+    --bs-primary: #CDC7C2;
+    --bs-secondary: #242422;
+    --bs-tertiary-bg: #948477;
+    --bs-btn-primary: #E1D6C4;
 }
 
+/* noise overlay */
 .noise::before {
     position: fixed;
     top: 0;
@@ -24,6 +25,33 @@ font-family: 'VT323', monospace; */
     background: url(../images/noise.gif);
 }
 
+/* skip link styling */
+.skip-link {
+    background-color: var(--bs-body-bg);
+}
+
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link a {
+    color: var(--bs-primary);
+    text-decoration: none;
+    font-family: 'VT323', monospace;
+}
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+/* button styling for back to top */
 #myBtn {
     display: none;
     position: fixed;
@@ -31,10 +59,10 @@ font-family: 'VT323', monospace; */
     right: 30px;
     z-index: 99;
     font-size: 2rem;
-    border: 2px solid var(--block-color-light);
+    border: 2px solid var(--bs-btn-primary);
     outline: none;
     background-color: transparent;
-    color: var(--block-color-light);
+    color: var(--bs-btn-primary);
     cursor: pointer;
     padding: 0 1rem;
     font-family: 'VT323', monospace;
@@ -44,20 +72,7 @@ font-family: 'VT323', monospace; */
     background-color: #555;
 }
 
-:root {
-    --color-main-black: #242422;
-    --color-text: #CDC7C2;
-    --block-color: #948477;
-    --block-color-light: #E1D6C4;
-
-    --bs-body-bg: #242422;
-    --bs-primary: #CDC7C2;
-    --bs-secondary: #242422;
-    --bs-tertiary-bg: #948477;
-    --bs-btn-primary: #E1D6C4;
-}
-
-
+/* styling for the text on the splash screen intro */
 .logo {
     font-family: 'Orbitron', sans-serif;
     font-size: 5rem;
@@ -66,9 +81,10 @@ font-family: 'VT323', monospace; */
 .logo:nth-child(2) {
     font-family: 'Orbitron', sans-serif;
     color: transparent;
-    -webkit-text-stroke: 1px var(--color-text);
+    -webkit-text-stroke: 1px var(--bs-primary);
 }
 
+/* styling for the intro curtain */
 .intro {
     position: fixed;
     z-index: 9999;
@@ -76,7 +92,7 @@ font-family: 'VT323', monospace; */
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--color-main-black);
+    background-color: var(--bs-body-bg);
     transition: 1s;
 }
 
@@ -85,7 +101,7 @@ font-family: 'VT323', monospace; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--color-text);
+    color: var(--bs-primary);
 }
 
 .logo {
@@ -107,6 +123,7 @@ font-family: 'VT323', monospace; */
     transition: ease-in-out 0.5s;
 }
 
+/* marquee list used in the header */
 .marquee__content li {
     list-style: none;
     font-size: 5rem;
@@ -116,9 +133,8 @@ font-family: 'VT323', monospace; */
     margin-top: -30px;
     text-transform: uppercase;
     padding: 0 0.5rem;
-    -webkit-text-stroke: 2px var(--color-text);
+    -webkit-text-stroke: 2px var(--bs-primary);
 }
-
 
 .marquee {
     --gap: 1rem;
@@ -129,6 +145,7 @@ font-family: 'VT323', monospace; */
     height: 50%;
 }
 
+/* using an infinite animation to create looping marquee effect */
 .marquee__content {
     flex-shrink: 0;
     min-width: 100%;
@@ -137,19 +154,16 @@ font-family: 'VT323', monospace; */
     animation: scroll 18s linear infinite;
 }
 
-
-
+/* below marquee uses similar styling as header marquee but requires subtle changes */
 .marquee2 {
     --gap: 1rem;
     overflow: hidden;
     user-select: none;
     gap: var(--gap);
     height: 50%;
-    border-top: 1px solid var(--color-text);
-    border-bottom: 1px solid var(--color-text);
+    border-top: 1px solid var(--bs-primary);
+    border-bottom: 1px solid var(--bs-primary);
 }
-
-
 
 .marquee__content2 {
     flex-shrink: 0;
@@ -158,6 +172,7 @@ font-family: 'VT323', monospace; */
     animation: scroll 18s linear infinite;
 }
 
+/* keyframe animation for the marquee */
 @keyframes scroll {
     from {
         transform: translateX(0);
@@ -168,41 +183,45 @@ font-family: 'VT323', monospace; */
     }
 }
 
+/* color styles for the navbar using bootstrap colors */
 .navbar {
-    background-color: var(--color-main-black);
-    border: 2px solid var(--color-text);
+    background-color: var(--bs-body-bg);
+    border: 2px solid var(--bs-primary);
 }
 
+/* some basic nav styling including fonts and borders */
 .navbar-toggler {
     border: none;
 }
 
 .nav-item a {
-    color: var(--color-text);
+    color: var(--bs-primary);
     font-family: 'VT323', monospace;
     font-size: 1.5rem;
     text-align: center;
 }
 
 .nav-item a:hover {
-    color: var(--block-color);
+    color: var(--bs-tertiary-bg);
     transition: ease-in-out 0.3s;
 }
 
 .navbar-toggler[aria-expanded=false] span::after {
     content: "menu";
     font-family: "Material Icons";
-    color: var(--color-text);
+    color: var(--bs-primary);
     border: none;
 }
 
+/* styling to change the look of the button in the nav toggler */
 button span::after {
     content: "close";
     font-family: "Material Icons";
-    color: var(--color-text);
+    color: var(--bs-primary);
     border: none;
 }
 
+/* styling for logo */
 .menu-logo {
     max-width: 40%;
 }
@@ -212,18 +231,19 @@ button span::after {
     transition: ease-in-out 0.3s;
 }
 
+/* some basic styling for carousel */
 .carousel {
     max-width: 100%;
     padding: 1rem 0;
 }
 
-
 .line {
-    border-bottom: 2px solid var(--color-text);
+    border-bottom: 2px solid var(--bs-primary);
 }
 
+/* !important tag used to override default margin top styling */
 .home-main .container-fluid {
-    background-color: var(--block-color);
+    background-color: var(--bs-tertiary-bg);
     margin-top: 0 !important;
 }
 
@@ -242,7 +262,7 @@ button span::after {
     font-family: 'Orbitron', sans-serif;
     font-weight: bolder;
     font-size: 2rem;
-    color: var(--color-main-black);
+    color: var(--bs-secondary);
     text-transform: uppercase;
 }
 
@@ -254,17 +274,19 @@ button span::after {
     padding: 0;
 }
 
-.project-container h1 {
+/* styling for header */
+.project-container h2 {
     font-family: 'Orbitron', sans-serif;
     font-weight: bolder;
     font-size: 5rem;
     color: transparent;
     text-transform: uppercase;
-    -webkit-text-stroke: 2px var(--color-text);
+    -webkit-text-stroke: 2px var(--bs-primary);
 }
 
+/* styling for rectangle above the containers presenting as a tab */
 .rectangle {
-    background-color: var(--block-color-light);
+    background-color: var(--bs-btn-primary);
     width: 100%;
     height: 20px;
     margin-top: 1rem;
@@ -277,7 +299,7 @@ button span::after {
     background-color: #7c7875;
 }
 
-
+/* basic footer stylings */
 .footermenu {
     color: #fff;
     padding: 15px;
@@ -295,28 +317,30 @@ button span::after {
 
 .column-menu a {
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--bs-primary);
     font-family: 'VT323', monospace;
     font-size: 1.5rem;
 }
 
+/* styling for the social icons using i tag as based on fontawesomes library */
 i {
     font-size: 1.3rem;
     padding-right: 1rem;
-    color: var(--color-text);
+    color: var(--bs-primary);
 }
 
 .column-menu a:hover {
-    color: var(--block-color);
+    color: var(--bs-tertiary-bg);
     transition: ease-in-out 0.5s;
 
 }
 
 .project:hover {
-    filter: drop-shadow(0 0 0.75rem var(--color-main-black));
+    filter: drop-shadow(0 0 0.75rem var(--bs-body-bg));
     transition: all 0.5s ease-in-out;
 }
 
+/* media query to halt all animations on the website for accessibility */
 @media (prefers-reduced-motion: reduce) {
     .marquee__content {
         animation-play-state: paused !important;
@@ -329,8 +353,10 @@ i {
     }
 }
 
+/* media query for mobile */
 @media only screen and (max-width: 768px) {
 
+    /* reduction in marquee size */
     .marquee__content li {
         list-style: none;
         font-size: 3rem;
@@ -340,9 +366,10 @@ i {
         margin-top: -30px;
         text-transform: uppercase;
         padding: 0 0.5rem;
-        -webkit-text-stroke: 2px var(--color-text);
+        -webkit-text-stroke: 2px var(--bs-primary);
     }
 
+    /* some basic styling for the project containers */
     .home-main .container-fluid img {
         padding: 1rem 0 0 0;
     }
@@ -379,7 +406,7 @@ i {
         width: 20%;
     }
 
-    .project-container h1 {
+    .project-container h2 {
         text-align: center;
         font-size: 2.5rem;
     }
@@ -391,6 +418,6 @@ i {
     i {
         font-size: 1rem;
         padding-right: 0.5rem;
-        color: var(--color-text);
+        color: var(--bs-primary);
     }
 }

@@ -27,6 +27,7 @@
     <div class="noise"></div>
     <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
     <header>
+        <!-- use of svg for the main header -->
         <svg viewBox="0 0 1920 157" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M-0.356018 157V31.432C-0.356018 25.6187 1.02465 20.3867 3.78598 15.736C6.69265 10.94 10.4713 7.16137 15.122 4.40003C19.918 1.49337 25.2226 0.0400391 31.036 0.0400391H124.994C130.807 0.0400391 136.039 1.49337 140.69 4.40003C145.486 7.16137 149.337 10.94 152.244 15.736C155.151 20.3867 156.604 25.6187 156.604 31.432V157H124.776V105.334H31.036V157H-0.356018ZM31.036 73.942H124.776V32.958C124.776 32.522 124.631 32.2314 124.34 32.086C124.195 31.7954 123.904 31.65 123.468 31.65H32.344C31.908 31.65 31.5446 31.7954 31.254 32.086C31.1086 32.2314 31.036 32.522 31.036 32.958V73.942Z"
@@ -60,7 +61,7 @@
                 d="M1835.73 157V98.358L1763.13 0.0400391H1800.41L1851.42 64.132L1902.22 0.0400391H1939.93L1867.34 98.576V157H1835.73Z"
                 fill="#CDC7C2" />
         </svg>
-
+        <!-- marquee done with a repeating div and styled in css to create infinite effect -->
         <div class="marquee d-flex">
             <ul class="marquee__content d-flex justify-content-space-around">
                 <li>Designer</li>
@@ -86,11 +87,11 @@
         </div>
 
 
-
+        <!-- navbar done completely uising bootstrap -->
         <nav class="navbar rounded navbar-expand-lg ms-3 me-3">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img class="menu-logo"
-                        src="images/raclogo-transp-278_x_185-139_x_92.png" alt=""></a>
+                        src="images/raclogo-transp-278_x_185-139_x_92.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
@@ -98,13 +99,14 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="index.html"
+                                aria-label="Open home page">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="about.html" aria-label="Open about page">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="contact.html" aria-label="Open contact page">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -115,12 +117,14 @@
     <main class="contact-main">
         <div class="rectangle-container pl-3 pe-3 pt-3 pl-lg-5 pe-lg-5 pt-lg-5">
             <div class="rectangle" data-aos="fade-up">
-                <img src="images/expand_more_FILL0_wght400_GRAD0_opsz24.svg">
+                <img src="images/closebutton.svg" alt="close icon">
             </div>
         </div>
         <section class="contact-form pl-3 pe-3 pb-3 pl-lg-5 pe-lg-5 pb-lg-5">
             <div class="container-fluid form">
-                <div class="row">>Contact Me</div>
+                <div class="row">
+                    <h2>>Contact Me</h2>
+                </div>
                 <div class="row">
                     <p class="col-11 offset-1 contact-passage">> Feel free to contact me regarding project work,
                         commissions
@@ -151,41 +155,42 @@
         </section>
 
         <div class="contact-container d-flex" data-aos="fade-up">
-            <img class="svg-contact" src="images/contact.svg">
+            <img class="svg-contact" src="images/contact.svg" alt="contact-info">
         </div>
 
     </main>
-
     <footer>
+        <!-- footer marquee similar to header marquee but done with a repeating svg pattern -->
         <div class="marquee2 d-flex">
             <div class="marquee__content2 d-flex justify-content-space-around">
-                <img src="images/raccoon.svg">
-                <img src="images/raccoon.svg">
+                <img src="images/raccoon.svg" alt="racccoon logo">
+                <img src="images/raccoon.svg" alt="racccoon logo">
 
 
 
             </div>
             <!-- Mirrors the content above -->
             <div class="marquee__content2 d-flex  justify-content-space-around" aria-hidden="true">
-                <img src="images/raccoon.svg">
-                <img src="images/raccoon.svg">
+                <img src="images/raccoon.svg" alt="racccoon logo">
+                <img src="images/raccoon.svg" alt="racccoon logo">
             </div>
         </div>
+        <!-- footer done with bootstrep flex -->
         <div class="footermenu d-flex justify-content-between align-items-center">
             <ul class="column-menu d-flex flex-column">
-                <li><a href="#">Aashif Bishry</a></li>
-                <li><i class="fa-brands fa-square-instagram"></i><a href="https://www.instagram.com/"
-                        target="_blank">Instagram</a></li>
-                <li><i class="fa-brands fa-square-x-twitter"></i><a href="https://twitter.com/"
-                        target="_blank">Twitter</a></li>
-                <li><i class="fa-brands fa-square-behance"></i><a href="https://www.behance.net/"
-                        target="_blank">Behance</a></li>
+                <li><a href="#" aria-label="Back to top of page">Aashif Bishry</a></li>
+                <li><i class="fa-brands fa-square-instagram"></i><a href="https://www.instagram.com/" target="_blank"
+                        aria-label="Open Instagram">Instagram</a></li>
+                <li><i class="fa-brands fa-square-x-twitter"></i><a href="https://twitter.com/" target="_blank"
+                        aria-label="Open Twitter">Twitter</a></li>
+                <li><i class="fa-brands fa-square-behance"></i><a href="https://www.behance.net/" target="_blank"
+                        aria-label="Open Behance">Behance</a></li>
             </ul>
             <ul class="column-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" aria-label="Open home page">Home</a></li>
+                <li><a href="#" aria-label="Back to top of page">Portfolio</a></li>
+                <li><a href="about.html" aria-label="Open about page">About</a></li>
+                <li><a href="contact.html" aria-label="Open contact page">Contact</a></li>
             </ul>
         </div>
     </footer>

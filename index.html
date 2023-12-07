@@ -18,14 +18,23 @@
 </head>
 
 <body>
+    <!-- intro done using javascript animations -->
     <div class="intro">
         <h1 class="logo-header">
             <span class="logo">AASHIF</span><span class="logo">BISHRY</span>
         </h1>
     </div>
+    <!-- noise filter is done using an overlay div and styled within css -->
     <div class="noise"></div>
+    <!-- back to top button done with html and javascript to only appear after scrolling 500px downwards -->
     <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+    <!-- header section -->
     <header>
+        <!-- skip links for accessibility -->
+        <div class="skip-link">
+            <a href="#recent-projects" class="skip" aria-label="skips to recent projects">Skip to Recent Projects</a>
+        </div>
+        <!-- use of svg for the main header -->
         <svg viewBox="0 0 1920 157" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M-0.356018 157V31.432C-0.356018 25.6187 1.02465 20.3867 3.78598 15.736C6.69265 10.94 10.4713 7.16137 15.122 4.40003C19.918 1.49337 25.2226 0.0400391 31.036 0.0400391H124.994C130.807 0.0400391 136.039 1.49337 140.69 4.40003C145.486 7.16137 149.337 10.94 152.244 15.736C155.151 20.3867 156.604 25.6187 156.604 31.432V157H124.776V105.334H31.036V157H-0.356018ZM31.036 73.942H124.776V32.958C124.776 32.522 124.631 32.2314 124.34 32.086C124.195 31.7954 123.904 31.65 123.468 31.65H32.344C31.908 31.65 31.5446 31.7954 31.254 32.086C31.1086 32.2314 31.036 32.522 31.036 32.958V73.942Z"
@@ -59,7 +68,7 @@
                 d="M1835.73 157V98.358L1763.13 0.0400391H1800.41L1851.42 64.132L1902.22 0.0400391H1939.93L1867.34 98.576V157H1835.73Z"
                 fill="#CDC7C2" />
         </svg>
-
+        <!-- marquee done with a repeating div and styled in css to create infinite effect -->
         <div class="marquee d-flex">
             <ul class="marquee__content d-flex justify-content-space-around">
                 <li>Designer</li>
@@ -85,11 +94,11 @@
         </div>
 
 
-
+        <!-- navbar done completely uising bootstrap -->
         <nav class="navbar rounded navbar-expand-lg ms-3 me-3">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img class="menu-logo"
-                        src="images/raclogo-transp-278_x_185-139_x_92.png" alt=""></a>
+                        src="images/raclogo-transp-278_x_185-139_x_92.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
@@ -97,13 +106,14 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="index.html"
+                                aria-label="Open home page">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="about.html" aria-label="Open about page">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="contact.html" aria-label="Open contact page">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -111,8 +121,9 @@
         </nav>
 
     </header>
+    <!-- main section -->
     <main class="home-main">
-
+        <!-- carousel done with bootstrap -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -122,16 +133,33 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="images/slideshow1.png" alt="First slide">
+                    <picture>
+                        <source srcset="images/slideshow1-resp.png" media="(max-width:768px)">
+                        <source srcset="images/slideshow1.png" media="(min-width:768px)">
+                        <img class="d-block w-100" src="images/slideshow1.png" alt="First slide">
+                    </picture>
+
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="images/slideshow2.png" alt="Second slide">
+                    <picture>
+                        <source srcset="images/slideshow2-resp.png" media="(max-width:768px)">
+                        <source srcset="images/slideshow2.png" media="(min-width:768px)">
+                        <img class="d-block w-100" src="images/slideshow2.png" alt="Second slide">
+                    </picture>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="images/slideshow3.png" alt="Third slide">
+                    <picture>
+                        <source srcset="images/slideshow3-resp.png" media="(max-width:768px)">
+                        <source srcset="images/slideshow3.png" media="(min-width:768px)">
+                        <img class="d-block w-100" src="images/slideshow3.png" alt="Third slide">
+                    </picture>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="images/slideshow4.png" alt="Fourth slide">
+                    <picture>
+                        <source srcset="images/slideshow4-resp.png" media="(max-width:768px)">
+                        <source srcset="images/slideshow4.png" media="(min-width:768px)">
+                        <img class="d-block w-100" src="images/slideshow4.png" alt="Fourth slide">
+                    </picture>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -143,132 +171,163 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <!-- line to break the sections up -->
         <div class="line">
         </div>
-
-        <div class="project-container">
-            <h1>Recent Projects</h1>
-            <div class="rectangle" data-aos="fade-up">
-                <img src="images/expand_more_FILL0_wght400_GRAD0_opsz24.svg">
-            </div>
-            <div class="container-fluid mt-4" data-aos="fade-up">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="images/project1.jpg" class="img-fluid project" alt="Image">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>Photography</h2>
-                        <p>Explore "Ottawa: Through the Lens of a Student" capturing the city's blend of history,
-                            culture, and modernity. From historic landmarks to the vibrant academic scene, each photo
-                            tells my student life story. Faces of Ottawa showcase its diverse community, while city
-                            lights reveal its nighttime charm. Transitioning to "Skateboarding Symphony," witness
-                            dynamic moments frozen in time, capturing the raw energy and creativity of skateboarders
-                            defying gravity. Join me in this visual journey as each snapshot narrates the unique
-                            perspectives of Ottawa and the skateboarding world through my lens.</p>
+        <!-- project section done completely in bootstrap -->
+        <section id="recent-projects">
+            <div class="project-container">
+                <h2>Recent Projects</h2>
+                <div class="rectangle" data-aos="fade-up">
+                    <img src="images/closebutton.svg" alt="close icon">
+                </div>
+                <div class="container-fluid mt-4" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <picture>
+                                <source srcset="images/project1-resp.jpg" media="(max-width:768px)">
+                                <source srcset="images/project1.jpg" media="(min-width:768px)">
+                                <img class="img-fluid project" src="images/project1.jpg" alt="Photography">
+                            </picture>
+                        </div>
+                        <div class="col-md-6">
+                            <h2>Photography</h2>
+                            <p>Explore "Ottawa: Through the Lens of a Student" capturing the city's blend of history,
+                                culture, and modernity. From historic landmarks to the vibrant academic scene, each
+                                photo
+                                tells my student life story. Faces of Ottawa showcase its diverse community, while city
+                                lights reveal its nighttime charm. Transitioning to "Skateboarding Symphony," witness
+                                dynamic moments frozen in time, capturing the raw energy and creativity of skateboarders
+                                defying gravity. Join me in this visual journey as each snapshot narrates the unique
+                                perspectives of Ottawa and the skateboarding world through my lens.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="rectangle" data-aos="fade-up">
-                <img src="images/expand_more_FILL0_wght400_GRAD0_opsz24.svg">
-            </div>
-            <div class="container-fluid mt-4 custom-container" data-aos="fade-up">
-                <div class="row">
-                    <div class="col-md-6 order-md-2">
-                        <img src="images/project2.jpg" class="img-fluid project" alt="Image">
-                    </div>
-                    <div class="col-md-6 order-md-1">
-                        <h2>3D Design</h2>
-                        <p> Dive into my latest project, "3D Design with Blender," where I invite you to explore the
-                            captivating realm of 3D artistry. Leveraging the dynamic capabilities of the versatile
-                            Blender software, this endeavor encompasses digital sculpting, meticulous modeling, dynamic
-                            animations, and the creation of visually stunning art. Join me on a journey through the
-                            intricacies of virtual design as I showcase the transformative power of Blender in bringing
-                            imagination to life in the three-dimensional space.
-                        </p>
+                <div class="rectangle" data-aos="fade-up">
+                    <img src="images/closebutton.svg" alt="close icon">
+                </div>
+                <div class="container-fluid mt-4 custom-container" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-6 order-md-2">
+                            <picture>
+                                <source srcset="images/project2-resp.jpg" media="(max-width:768px)">
+                                <source srcset="images/project2.jpg" media="(min-width:768px)">
+                                <img class="img-fluid project" src="images/project2.jpg" alt="3d Design">
+                            </picture>
+                        </div>
+                        <div class="col-md-6 order-md-1">
+                            <h2>3D Design</h2>
+                            <p> Dive into my latest project, "3D Design with Blender," where I invite you to explore the
+                                captivating realm of 3D artistry. Leveraging the dynamic capabilities of the versatile
+                                Blender software, this endeavor encompasses digital sculpting, meticulous modeling,
+                                dynamic
+                                animations, and the creation of visually stunning art. Join me on a journey through the
+                                intricacies of virtual design as I showcase the transformative power of Blender in
+                                bringing
+                                imagination to life in the three-dimensional space.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="rectangle" data-aos="fade-up">
-                <img src="images/expand_more_FILL0_wght400_GRAD0_opsz24.svg">
-            </div>
-            <div class="container-fluid mt-4" data-aos="fade-up">
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="rectangle" data-aos="fade-up">
+                    <img src="images/closebutton.svg" alt="close icon">
+                </div>
+                <div class="container-fluid mt-4" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <picture>
+                                <source srcset="images/project3-resp.png" media="(max-width:768px)">
+                                <source srcset="images/project3.png" media="(min-width:768px)">
+                                <img class="img-fluid project" src="images/project3.png" alt="Artwork">
+                            </picture>
+                        </div>
+                        <div class="col-md-6">
+                            <h2>Artwork</h2>
+                            <p>In the realm of digital art, my creations are a seamless fusion of technology and
+                                artistic
+                                expression. With precision and infinite flexibility, I blend colors, textures, and
+                                shapes to
+                                craft intricate illustrations, design immersive digital landscapes, and experiment with
+                                abstract concepts. My top three go-to digital art software tools include Clip Studio
+                                Paint,
+                                Medibang Paint, and Adobe Illustrator, enabling me to push the boundaries of imagination
+                                in
+                                my artistic endeavors.
+                            </p>
 
-                        <img src="images/project3.png" class="img-fluid project" alt="Image">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>Artwork</h2>
-                        <p>In the realm of digital art, my creations are a seamless fusion of technology and artistic
-                            expression. With precision and infinite flexibility, I blend colors, textures, and shapes to
-                            craft intricate illustrations, design immersive digital landscapes, and experiment with
-                            abstract concepts. My top three go-to digital art software tools include Clip Studio Paint,
-                            Medibang Paint, and Adobe Illustrator, enabling me to push the boundaries of imagination in
-                            my artistic endeavors.
-                        </p>
-
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="rectangle" data-aos="fade-up">
-                <img src="images/expand_more_FILL0_wght400_GRAD0_opsz24.svg">
-            </div>
-            <div class="container-fluid mt-4 custom-container" data-aos="fade-up">
-                <div class="row">
-                    <div class="col-md-6 order-md-2">
-                        <a href="https://ahme0579.github.io/mtm6201-midterm/" target="_blank">
-                            <img src="images/project4.png" class="img-fluid project" alt="Image">
-                        </a>
-                    </div>
-                    <div class="col-md-6 order-md-1">
-                        <h2>Web Development</h2>
-                        <p> I specialize in creating sophisticated and user-centric websites. The "Elegant Cravings"
-                            bakery site, a standout from my college projects, showcases my mastery in seamless front-end
-                            design, combining aesthetic appeal with intuitive user interactions. My commitment extends
-                            to delivering websites tailored to clients' needs, ensuring a balance between visual appeal
-                            and functional robustness.
-                        </p>
+                <div class="rectangle" data-aos="fade-up">
+                    <img src="images/closebutton.svg" alt="close icon">
+                </div>
+                <div class="container-fluid mt-4 custom-container" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-6 order-md-2">
+                            <a href="https://ahme0579.github.io/mtm6201-midterm/" target="_blank">
+                                <picture>
+                                    <source srcset="images/project4-resp.png" media="(max-width:768px)">
+                                    <source srcset="images/project4.png" media="(min-width:768px)">
+                                    <img class="img-fluid project" src="images/project4.png" alt="Web Development">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="col-md-6 order-md-1">
+                            <h2>Web Development</h2>
+                            <p> I specialize in creating sophisticated and user-centric websites. The "Elegant Cravings"
+                                bakery site, a standout from my college projects, showcases my mastery in seamless
+                                front-end
+                                design, combining aesthetic appeal with intuitive user interactions. My commitment
+                                extends
+                                to delivering websites tailored to clients' needs, ensuring a balance between visual
+                                appeal
+                                and functional robustness.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-    </main>justify
+            </div>
+        </section>
+    </main>
 
     <footer>
+        <!-- footer marquee similar to header marquee but done with a repeating svg pattern -->
         <div class="marquee2 d-flex">
             <div class="marquee__content2 d-flex justify-content-space-around">
-                <img src="images/raccoon.svg">
-                <img src="images/raccoon.svg">
+                <img src="images/raccoon.svg" alt="racccoon logo">
+                <img src="images/raccoon.svg" alt="racccoon logo">
 
 
 
             </div>
             <!-- Mirrors the content above -->
             <div class="marquee__content2 d-flex  justify-content-space-around" aria-hidden="true">
-                <img src="images/raccoon.svg">
-                <img src="images/raccoon.svg">
+                <img src="images/raccoon.svg" alt="racccoon logo">
+                <img src="images/raccoon.svg" alt="racccoon logo">
             </div>
         </div>
+        <!-- footer done with bootstrep flex -->
         <div class="footermenu d-flex justify-content-between align-items-center">
             <ul class="column-menu d-flex flex-column">
-                <li><a href="#">Aashif Bishry</a></li>
-                <li><i class="fa-brands fa-square-instagram"></i><a href="https://www.instagram.com/"
-                        target="_blank">Instagram</a></li>
-                <li><i class="fa-brands fa-square-x-twitter"></i><a href="https://twitter.com/"
-                        target="_blank">Twitter</a></li>
-                <li><i class="fa-brands fa-square-behance"></i><a href="https://www.behance.net/"
-                        target="_blank">Behance</a></li>
+                <li><a href="#" aria-label="Back to top of page">Aashif Bishry</a></li>
+                <li><i class="fa-brands fa-square-instagram"></i><a href="https://www.instagram.com/" target="_blank"
+                        aria-label="Open Instagram">Instagram</a></li>
+                <li><i class="fa-brands fa-square-x-twitter"></i><a href="https://twitter.com/" target="_blank"
+                        aria-label="Open Twitter">Twitter</a></li>
+                <li><i class="fa-brands fa-square-behance"></i><a href="https://www.behance.net/" target="_blank"
+                        aria-label="Open Behance">Behance</a></li>
             </ul>
             <ul class="column-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" aria-label="Open home page">Home</a></li>
+                <li><a href="#" aria-label="Back to top of page">Portfolio</a></li>
+                <li><a href="about.html" aria-label="Open about page">About</a></li>
+                <li><a href="contact.html" aria-label="Open contact page">Contact</a></li>
             </ul>
         </div>
     </footer>
-    </div>
+
+    <!-- scripts used for webpage -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
